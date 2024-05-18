@@ -12,3 +12,9 @@ Listeners (unless SampleResult is null)
 ```
 
 #### Passing Variables between Thread Groups: 
+
+#### Ramp-up period: 
+
+#### TPS(Transaction Per second): 
+
+#### 
