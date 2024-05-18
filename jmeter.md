@@ -18,14 +18,35 @@
 
 ### Setup Thread Group: 
 
-
 ### Tear Down Thread Grouop: 
 
 
-## Config element: 
+## Config element:
+Config elements in JMeter, or configuration elements, are used to modify or configure the sampler requests made to the server. 
+
+### HTTP Header Manager: 
+Can define default headers here and itis used by Samplers.
+
+### HTTP Cookie Manager:
+Here can define cookies which can be used by samplers. 
+
+### User Defined Variables: 
+Can define user variables here and use anywhere like samplers, assertions.
+
+### CSV Data Set Config: 
+used for providing external data to samplers by csv for testing scenarios with multiple datasets. 
+
+### Random Variable: 
+Generated random values and match real time users as input to samplers.
+
+### counter: 
+It creates unique values for each test iteration ,incremented by provided increment.
+
 
 
 ## Listeners: 
+
+
 
 
 ## Timers: 
