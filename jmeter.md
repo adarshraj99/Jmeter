@@ -45,17 +45,59 @@ It creates unique values for each test iteration ,incremented by provided increm
 
 
 ## Listeners: 
+Displays the results of samples in a test in tables, graphs, trees, or log file. 
+
 
 
 
 
 ## Timers: 
+timers are time pause in between the execution.
+
+### Constant Timer: 
+ It gives fixed amount of time (in milliseconds) to pause the thread before proceeding to the next sampler.  
+
+### Uniform Random Timer: 
+Provides random delay between requests between provided min and max range.
+
+### Constant Throughput Timer:
+It creates constant throughput (number of requests per minute) as defined by you.
+
+
 
 
 ## pre-processors: 
+preprocessors are elements that run actions before sampler requests are executed in a test scenario. 
+
+### JSR223 PreProcessor:
+Allows to run custom java code before running sampler. Used to manipulate data, perform calculations, or interact with external systems prior to sending requests.
+
+### User Parameters PreProcessor:
+Used as variables, it is used to avoid duplicate variables as it can be used by different samplers. 
+
+### DBC PreProcessor: 
+Allows to setup DB connection and execute SQL query. 
+
+### BeanShell PreProcessor: 
+Similar to JSR223 preprocessor this one uses BeanShell language. 
 
 
-## post-processors: 
+
+
+## Postprocessor: 
+
+### Regular Expression Extractor: 
+Uses RE to extract specific value from response data that can be used for assertions or requests within tests. 
+
+### XPath Extractor:
+Extracts specific elements or attributes according to the provuided xpaths. 
+
+### JSON Path Extractor:
+
+### Debug PostProcessor:
+Helps in debugging .Prints the entire response or specific parts of it to the JMeter log. 
+
+
 
 
 ## Assertions: 
