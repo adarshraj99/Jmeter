@@ -175,3 +175,16 @@ iterates through a list of values and executes a block of test elements for each
 #### Switch Controller:
 Switch Controller: This controller evaluates a variable and executes the block of elements associated with the matching value. like a multi-way If Controller based on a single variable.
 
+
+
+**********************************************************************************************************************************************************************
+
+## Connecting to MySQL DB: 
+Free DB : db4free.net
+Free json APIs : dummyjson.com
+
+
+Jmeter is written on java so, download JDBC driver > Copy mysql-connector.jar file into the jmeter's lib file > Restart Jmeter > In Thread group add config element as JDBC connection configuration > add sampler JDBC request > 
+- In Sampler add JDBC connection configuration with DB url with correct port number to avoid connection issue. 
+- setup sample in : https://www.youtube.com/watch?v=6i4Qc_jR7LE&list=PLVCgi5HZ0-Yt3N9tbjzi-WVQaH9UKkz73&index=4
+   
