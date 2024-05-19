@@ -130,14 +130,48 @@ It is for recording the network traffic, recording test scripts,
 
 
 
-
-
 ## Sampler: 
 
-### HTTP Request: 
+#### HTTP Request: 
 - Redirect automatically : redirects to other url as per the server response, this donot consider each redirect as a saperate request.lowering memory taken and response time
 - Follow redirect : This also redirects to other url.But, this consider each redirect as a saperate request. Takes more memory and response time.
 - Keep alive: passes "Connection: keep-alive" in header. keeps consistant connection between server and cient and holds server resources. 
 - use multipart/formdata: For sending json values to server.  
 - Browser compatible headers: Selecting this supresses Content type and Content transfer encoding (It supresses HTTP headers that specify the nature of information being transmitted and how it is formatted for transmission). It only keeps Content-Disposition header(HTTP response header that indicates how to process a response payload for frontend view)
-  
+
+#### JDBC Request Sampler: 
+for testing database performance. It lets you send SQL queries to a database server and retrieve the results. You can specify the connection details, SQL query, and how to handle the results.
+
+#### FTP Request Sampler:     
+This sampler is used for testing FTP servers. It allows you to upload, download, or list files on an FTP server.
+
+#### SMTP Sampler: 
+for testing email servers. It allows you to send emails from JMeter to verify email functionality and performance.
+
+
+
+
+## Logic controllers: 
+allows you to customize the logic used to decide when to send requests. It can change the order of requests, repeat requests, modify requets in run time, run requets in loop, 
+
+#### loop controller: 
+allows you to repeat a block of test elements (samplers, assertions, etc.) a specified number of times or indefinitely (useful for load testing).
+
+#### If Controller:
+enables conditional execution of test elements based on a specific condition.
+
+#### While Controller:
+ keep executing a block of test elements as long as a certain condition remains true. 
+
+#### Transaction Controller:
+groups related samplers together to represent a business transaction.
+
+#### Simple Controller: 
+basic container that holds a single sampler or another controller. It doesn't add any specific logic but can be used to group related elements for better organization.
+
+#### ForEach Controller: 
+iterates through a list of values and executes a block of test elements for each value.
+
+#### Switch Controller:
+Switch Controller: This controller evaluates a variable and executes the block of elements associated with the matching value. like a multi-way If Controller based on a single variable.
+
