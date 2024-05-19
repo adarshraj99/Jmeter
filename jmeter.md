@@ -102,11 +102,31 @@ Helps in debugging .Prints the entire response or specific parts of it to the JM
 
 ## Assertions: 
 
+### Response Assertion: 
+to verify the patterns in the response body received from the server. like : contains, matches, equal, etc. 
+
+### Size Assertion: 
+Size assertion is used to verify the expected number of bytes with >, <, =, etc. 
+
+### XML Assertion:
+verify if the expected XML document is present in the server response or not. it does total expected finding in actual response. Actual can have extra things.
+
+### HTML Assertion: 
+same like XML assertion. Verifies if the expected HTML is in the actual assertion. 
+
+### BeanShell Assertion: 
+Can write custom logic using beanshell scripts. 
+
+### Duration Assertion: 
+Checks response time of requests.
+
 
 ## Test Fragement: 
-
+type of controller that acts like a reusable block of test logic. For code reusablity. Itis not executed until called. 
 
 ## Non-Test Elements: 
+It is for recording the network traffic, recording test scripts, 
+
 
 
 
